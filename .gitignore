@@ -1,0 +1,9 @@
+dist/
+node_modules/
+*.tmp
+.idea/
+*.iml
+*.sublime-workspace
+.DS_Store
+*.swp
+.built
