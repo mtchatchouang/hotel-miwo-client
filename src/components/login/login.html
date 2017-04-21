@@ -1,0 +1,14 @@
+<div ng-if="$ctrl.error === true" class="alert alert-danger">
+    Benutzername oder Passwort falsch. Bitte erneut versuchen...
+</div>
+<form name="form" ng-submit="$ctrl.login($ctrl.credentials)" novalidate>
+    <input id="requestURI" type="hidden" value="/" name="requestURI"/>
+
+    <label for="username" class="sr-only">Login</label>
+    <input id="username" class="form-control" ng-model="$ctrl.credentials.username" required="required" type="text" name="username"/>
+
+    <label for="password" class="sr-only">Password</label>
+    <input id="password" class="form-control" ng-model="$ctrl.credentials.password" required="required" type="password" name="password"/>
+
+    <button class="btn btn-lg btn-primary btn-block" ng-disabled="form.$invalid">Anmelden</button>
+</form>
